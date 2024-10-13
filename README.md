@@ -17,7 +17,7 @@ This project generates synthetic macroblocking artifacts in video frames, simula
   - [Directional Shifting](#directional-shifting)
   - [Padding and Blending](#padding-and-blending)
 - [Contributing](#contributing)
-- [License](#license)
+- [Preliminary Dataset](https://drive.google.com/drive/folders/1z07YbYSiEItlqbWrAN3rdQ76Z6Z8SeWK?usp=sharing)
 
 ## Overview
 Macroblocking artifacts occur in video frames as a result of compression errors, where parts of an image block are visually corrupted. These artifacts are common in low-bandwidth video streaming and can degrade the user experience. This project allows you to simulate such artifacts by copying pixels, applying random directional shifts, and blending parts of video frames to mimic these issues.
