@@ -40,3 +40,89 @@ You can install the required Python libraries using pip:
 
 ```bash
 pip install opencv-python numpy
+```
+
+## Usage
+
+### Frame Extraction
+Before adding macroblocking artifacts, you'll need to extract frames from the video:
+
+```bash
+# Example script for extracting frames using ffmpeg
+ffmpeg -i input_video.mp4 frames/frame_%04d.png
+```
+
+### Generating Macroblocking Artifacts
+Run the script to process the extracted frames and introduce macroblocking artifacts:
+
+```python
+from artifact_generator import process_frames_with_middle_copying
+
+# Parameters:
+# - Input folder containing frames
+# - Output folder for modified frames
+# - Block size for checkered pattern
+# - Maximum shift value for pixel displacement
+# - Padding margin to avoid edge copying
+# - Blending factor for smooth block transitions
+# - Whether to apply artifacts horizontally or vertically
+# - Direction of pixel shifts within blocks ('up', 'down', 'left', 'right')
+
+process_frames_with_middle_copying(
+    input_folder='frames',
+    output_folder='modified_frames',
+    block_size=30,
+    max_shift_value=15,
+    padding_margin=50,
+    blend_factor=0.4,
+    horizontal=True,
+    direction='left'  # 'left', 'right', 'up', 'down'
+)
+```
+
+### Repackaging the Video
+Once the frames have been processed, you can repackage them into a video:
+
+```bash
+# Example script for repackaging frames using ffmpeg
+ffmpeg -r 30 -i modified_frames/frame_%04d.png -c:v libx264 -pix_fmt yuv420p output_video_with_artifacts.mp4
+```
+
+## Example
+Here’s an example of generating artifacts in video frames:
+
+**Original Image:**
+
+![Original Image](path_to_original_image)
+
+**With Macroblocking Artifacts:**
+
+![With Macroblocking Artifacts](path_to_artifacted_image)
+
+
+
+## Customization
+### Directional Shifting
+You can customize the direction of pixel shifts within the blocks. Available directions are:
+- up
+- down
+- left
+- right
+
+These directional shifts can simulate different kinds of macroblocking effects.
+
+### Padding and Blending
+To avoid copying pixels from the image background (such as white or black areas), you can specify a `padding_margin` to only copy pixels from the middle part of the image. The blocks can also be smoothly blended with the surrounding areas using the `blend_factor` parameter, creating a more natural-looking artifact.
+
+
+## Contributing
+Contributions are welcome! If you'd like to improve this project, feel free to submit a pull request or file an issue.
+
+### How to Contribute:
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add a new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a pull request.
+
+
