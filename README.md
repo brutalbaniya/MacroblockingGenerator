@@ -89,7 +89,9 @@ ffmpeg -r 30 -i modified_frames/frame_%04d.png -c:v libx264 -pix_fmt yuv420p out
 ```
 
 ## Example
-Here’s an example of generating artifacts in video frames:
+Here’s an example of generating artifacts in one of the video frames:
+
+Credits- https://www.youtube.com/watch?v=IUN664s7N-c
 
 **Original Image:**
 
