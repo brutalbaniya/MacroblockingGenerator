@@ -93,11 +93,12 @@ Here’s an example of generating artifacts in video frames:
 
 **Original Image:**
 
-![Original Image](path_to_original_image)
+![Original Image](https://github.com/user-attachments/assets/1264402a-57a1-41e4-91c6-320f90d5dc8b)
+
 
 **With Macroblocking Artifacts:**
 
-![With Macroblocking Artifacts](path_to_artifacted_image)
+![With Macroblocking Artifacts](https://github.com/user-attachments/assets/14bf03ca-d599-41b9-9b09-02a4272d48a8)
 
 
 
