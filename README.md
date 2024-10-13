@@ -95,13 +95,14 @@ Credits- https://www.youtube.com/watch?v=IUN664s7N-c
 
 **Original Image:**
 
-![Original Image](https://github.com/user-attachments/assets/1264402a-57a1-41e4-91c6-320f90d5dc8b)
+![Original Image -1](https://github.com/user-attachments/assets/1264402a-57a1-41e4-91c6-320f90d5dc8b)
+![Original Image -2](https://github.com/user-attachments/assets/bfd4f177-0064-4cff-bfa5-fd8ebe5f5883)
 
 
 **With Macroblocking Artifacts:**
 
-![With Macroblocking Artifacts](https://github.com/user-attachments/assets/14bf03ca-d599-41b9-9b09-02a4272d48a8)
-
+![With Macroblocking Artifacts-1](https://github.com/user-attachments/assets/14bf03ca-d599-41b9-9b09-02a4272d48a8)
+![With Macroblocking Artifacts-2](https://github.com/user-attachments/assets/134be8a7-fe9d-4e1f-9573-5daa744ed293)
 
 
 ## Customization
