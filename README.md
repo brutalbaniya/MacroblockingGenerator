@@ -16,8 +16,10 @@ This project generates synthetic macroblocking artifacts in video frames, simula
 - [Customization](#customization)
   - [Directional Shifting](#directional-shifting)
   - [Padding and Blending](#padding-and-blending)
+- [ToDo](#to-do)
 - [Contributing](#contributing)
-- [Preliminary Dataset](https://drive.google.com/drive/folders/1z07YbYSiEItlqbWrAN3rdQ76Z6Z8SeWK?usp=sharing)
+- [Results from different methods](https://drive.google.com/file/d/1g3u4VY3pwwRlMxrWHkIaJrng2Zkphri-/view?usp=sharing)
+- [Prelimnary Dataset](https://drive.google.com/file/d/1LKXoc950eLutAxkgoTaq0iG-f1zfKywG/view?usp=sharing)
 
 ## Overview
 Macroblocking artifacts occur in video frames as a result of compression errors, where parts of an image block are visually corrupted. These artifacts are common in low-bandwidth video streaming and can degrade the user experience. This project allows you to simulate such artifacts by copying pixels, applying random directional shifts, and blending parts of video frames to mimic these issues.
@@ -118,6 +120,9 @@ These directional shifts can simulate different kinds of macroblocking effects.
 ### Padding and Blending
 To avoid copying pixels from the image background (such as white or black areas), you can specify a `padding_margin` to only copy pixels from the middle part of the image. The blocks can also be smoothly blended with the surrounding areas using the `blend_factor` parameter, creating a more natural-looking artifact.
 
+## To do
+- Write a bash script to automate the whole process
+- Add auto csv generator for frames and respective random parameters
 
 ## Contributing
 Contributions are welcome! If you'd like to improve this project, feel free to submit a pull request or file an issue.
